@@ -1,18 +1,12 @@
 const express = require('express');
 const app = express();
-const { addUser, addPost, addComment, addCategory } = require('./routes');
 
-app.use(express.json());
-
-// Example route for adding a user
-app.post('/addUser', (req, res) => {
-  const { username, email } = req.body;
-  const user = addUser(username, email);
-  res.status(201).json(user);
+// Route to handle the root URL "/"
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
 });
 
-// More routes for other actions (e.g., adding posts, comments, categories)
-
+// Listen on the port provided by Heroku or default to 5000
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
