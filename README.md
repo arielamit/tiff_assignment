@@ -6,8 +6,8 @@ This is a simple app that demonstrates handling entity relationships and CRUD op
 
 1. Clone the repository.
 2. Run `npm install` to install dependencies.
-3. Run `npm start` to start the server locally.
-4. Nevigate to http://localhost:5000/
+3. Run `node server.js` to start the server locally.
+5. Nevigate to http://localhost:5000/
 
 ## API Endpoints
 
